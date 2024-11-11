@@ -9,10 +9,7 @@ package model;
  * @author milan
  */
 public enum Zanr {
-    ROMAN,
-    POEZIJA,
-    ISTORIJSKI,
-    DETEKTIVSKI,
-    NAUCNAFANTASTIKA;
+    TRAGEDY,
+    NOVEL;
     
 }

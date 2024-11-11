@@ -279,7 +279,7 @@ public class FormaKnjiga extends javax.swing.JDialog {
           knjigaZaIzmenu.setNaslov(naziv);
           knjigaZaIzmenu.setGodinaIzdanja(godIzdanja);
           Knjiga novaKnjiga = new Knjiga(naziv,autor,isbn,godIzdanja,zanr);
-          knjigaZaIzmenu=novaKnjiga;
+          kontroler.azurirajKnjigu(novaKnjiga);
           
           
           gf.osveziTabelu();
@@ -310,7 +310,7 @@ public class FormaKnjiga extends javax.swing.JDialog {
 
     private void popuniComboBoxAutorima() {
         jComboBox1.removeAllItems();
-        List<Autor> autori = kontroler.getListaAutora();
+        List<Autor> autori = kontroler.ucitajListuAutoraIzBaze();
         for(Autor a:autori){
             jComboBox1.addItem(a);
         }
